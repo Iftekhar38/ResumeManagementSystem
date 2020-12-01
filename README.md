@@ -1,6 +1,6 @@
 # ResumeManagementSystem
-Will Maintain Employees Resumes
-Menu Options
+Will Maintain Employees Resumes<br>
+Menu Options<br>
 Home
 Registration page
 Login Page
