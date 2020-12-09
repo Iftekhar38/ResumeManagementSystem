@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<form method="post" action="{% url 'user_registration' %}">
+{% csrf_token %}
+
+<table align="center" border="0">
+<tr>
+<th colspan="2"><h1>Registration Page</h1></th>
+</tr>
+<tr>
+<th>{{form.name.label}}</th>
+<th>{{form.name}}</th>
+</tr>
+<tr>
+<th>{{form.contact.label}}</th>
+<th>{{form.contact}}</th>
+</tr>
+<tr>
+<th>{{form.email.label}}</th>
+<th>{{form.email}}</th>
+</tr>
+<tr>
+<th>{{form.password.label}}</th>
+<th>{{form.password}}</th>
+</tr>
+<tr>
+    
+    <th><input type="hidden" name="otp" required="" id="id_otp" value="0"></th>
+</tr>
+<tr><th colspan="2"><button type="submit" class="btn btn-primary">Save</button></th></tr>
+    
+
+</table>
+
+</form>
+{% endblock  %}

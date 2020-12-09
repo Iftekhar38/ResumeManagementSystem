@@ -1,0 +1,18 @@
+from django.urls import path
+from process import views
+
+
+urlpatterns = [
+    path('', views.showIndex, name='main_page'),
+    path('registration/', views.registration, name='registration'),
+    path('user_registration/', views.registration, name='user_registration'),
+    path('validation_otp/',  views.validate_otp, name='validate_otp'),
+    #otp page
+    path('user_otp/', views.userOTP, name='user-otp'),
+    # conformation
+    path('conformation/', views.conformation, name='conformation'),
+
+    #login
+    path('login/', views.login, name='login')
+
+]
