@@ -22,7 +22,7 @@
     </style>
   </head>
   <body>
-    <table class="table-responsive-md table-borderless" align = "center" width="1000">
+    <table class="table-responsive-md table-borderless" align = "center" width="100%">
     <tr>
       <th style="background-color: #330066; text-align : center; padding:10px">
       <img src="{% static 'images/logo.png' %}" width="100" height="100"></th>
@@ -59,7 +59,7 @@
           Profile <span class="sr-only">(current)</span></a>
         </a>
         <div class="dropdown-menu menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">View Profile</a>
+          <a class="dropdown-item" href="{% url 'view_profile' %}">View Profile</a>
           <a class="dropdown-item" href="#">Update Profile</a>
           <a class="dropdown-item" href="#">Delete Profile</a>
         </div>
@@ -68,12 +68,12 @@
 
         <div class="menu">
       <li class="nav-item active">
-        <a class="nav-link" href="{%url 'login' %}">Login <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'login' %}">Login <span class="sr-only">(current)</span></a>
       </li>
       </div>
       <div class="menu">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Logout <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'logout' %}">Logout <span class="sr-only">(current)</span></a>
       </li>
       </div>
 

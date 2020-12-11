@@ -1,8 +1,36 @@
 {% extends 'index.html' %}
 
+
 {% block content %}
+
     {% load static %}
 
-   <h1>Welcome Login page</h1>
+   {% if request.session.contact %}
+   
+   
+    {% else %}
+   <div class="container">
+    <form action="{% url 'login_check'%}" method="post">
+    {% csrf_token %}
+    <h1>Welcome Login page</h1>
+    <input type="email" placeholder="Email" required name="u1"><br>
+    <input type="password" placeholder="Password" required name="u2"><br>
+    <br>
+    <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+    </form>
+    
+    {% if error %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Error!..... </strong> {{ error }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+    {% endif %}
+
+    {% endif %}
+    
+   
 
 {% endblock %}
